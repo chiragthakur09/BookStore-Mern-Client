@@ -4,6 +4,7 @@ import { BiUserCircle } from "react-icons/bi";
 import { AiOutlineEdit } from "react-icons/ai";
 import { MdOutlineDelete } from "react-icons/md";
 import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
 
 const BookCard = ({ book, index }) => {
   return (
@@ -33,6 +34,11 @@ const BookCard = ({ book, index }) => {
       </div>
     </div>
   );
+};
+
+BookCard.propTypes = {
+  book: PropTypes.object.isRequired,
+  index: PropTypes.number.isRequired,
 };
 
 export default BookCard;
